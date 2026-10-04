@@ -1,6 +1,6 @@
 # 开放原子工作室招新题目
 ## 学习笔记
-### day1-task2
+### task2
 1.int 整型  
 2.double 双精度浮点型  
 3.boolean 布尔型  
@@ -20,4 +20,4 @@
 Scanner sc = new Scanner(System.in);  
 int choice = sc.nextInt();
 Sring str = sc.next();` 
-### day2-task3
+### task3
