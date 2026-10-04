@@ -1,10 +1,8 @@
 public class Product {
-
-    // ================= Task1: 封装属性 =================
     // 使用 private 隐藏属性，保护数据安全
-    private String productId;   // 商品编号
-    private String productName; // 商品名称
-    private double price;       // 商品价格
+    private String productId;   // 编号
+    private String productName; // 名称
+    private double price;       // 价格
 
     // 提供 public 的 Getter/Setter 方法
     public String getProductId() {
@@ -30,12 +28,8 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
-
-    // ================= Task3: 静态成员变量 =================
     // 声明 private static int 记录总数，归属类本身
     private static int totalProductCount = 0;
-
-    // ================= Task2: 构造器重载 =================
 
     // 1. 无参构造器
     public Product() {
@@ -54,18 +48,16 @@ public class Product {
         totalProductCount++;
     }
 
-    // ================= Task3: 静态方法 =================
     // 提供静态方法，通过类名直接调用，返回创建的对象总数
     public static int getTotalCount() {
         return totalProductCount;
     }
 
-    // 辅助方法：打印商品信息（方便 Task4 调用）
+    // 辅助方法：打印商品信息
     public void printInfo() {
         System.out.println("商品信息: [" + productId + "] " + productName + ", 价格: " + price + "元");
     }
 
-    // ================= Task4: main 方法测试 =================
     public static void main(String[] args) {
         // 1. 实例化两个不同的 Product 对象
         // 这里使用全参构造器创建，以满足示例输出
