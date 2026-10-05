@@ -1,8 +1,7 @@
-package variable;
-
 public class if_demo1 {
     public static void main(String []args){
         for(int i = 1;i <= 3;i++){
+            // 打印倒三角
             for(int j = i;j <= 2;j++){
                 System.out.print(" ");
             }
