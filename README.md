@@ -1,23 +1,40 @@
 # 开放原子工作室招新题目
 ## 学习笔记
 ### task2
-1.int 整型  
-2.double 双精度浮点型  
-3.boolean 布尔型  
-4.String name  用于存文本  
-5.逻辑运算符：|| 或,&& 与，！非  
-6.字符串拼接 +
+1.基本类型：int 整型、double 双精度浮点型、boolean 布尔型、String 存文本  
+2.逻辑运算符：|| 或，&& 与，！非  
+3.字符串拼接用 +  
+4.变量交换：算术法（加减，可能溢出）、位运算法（异或 ^）  
+5.System.out.println() 打印输出  
+6.public static void main(String[] args){...} 程序主入口  
+7.Scanner 读取控制台输入：nextInt() 读整数，next() 读字符串  
 
-**变量交换**
-1.算术运算 (缺点：可能溢出)
-2.位运算法 '
-
-7.System.out.println() 打印输出  
-8.public static void main(String[] args){...} 程序主入口  
-9.while(true)死循环  
-10.Scanner控制台输入  
-`import java.util.Scanner;  
-Scanner sc = new Scanner(System.in);  
-int choice = sc.nextInt();
-Sring str = sc.next();` 
 ### task3
+1.while(true) 死循环配合 break，实现菜单反复选择  
+2.switch-case 多分支：case 后跟常量，default 处理其余情况  
+**⚠ 易错：每个 case 末尾漏写 break 会"穿透"，继续执行下一个 case**  
+3.**⚠ 易错：break 只结束所在的 switch，要退出外层 while 必须在循环里单独判断**  
+4.if - else if - else 区间判断  
+**⚠ 易错：区间要按从大到小依次判断，顺序写反会导致分支永远进不去**  
+5.输入合法性校验：分数 0-100、层数 > 0、阶乘不支持负数  
+6.嵌套 for 循环打印图形：外层控制行，内层控制列  
+**空心金字塔：每行先打 rows-i 个空格；首行和末行打 2\*i-1 个 \*；中间行只打首尾两个 \***  
+7.System.out.print() 不换行，println() 换行  
+8.成员方法要先 new 出对象，再用对象调用  
+**⚠ 易错：静态 main 里不能直接调用非静态方法**  
+9.递归：方法自己调用自己，必须写终止条件  
+**⚠ 易错：缺少终止条件会无限递归，导致栈溢出**  
+
+### task4
+1.类是模板，对象是实例，用 new 创建  
+2.成员变量定义在类中方法外，局部变量定义在方法内  
+3.封装：属性用 private 隐藏，再提供 public 的 getter/setter 供外部读写  
+4.this 指代当前对象，用来区分同名的成员变量和参数  
+5.构造器：与类同名、不写返回值类型，new 时自动执行，常用来赋初值  
+6.构造器重载：参数个数或类型不同即可  
+**⚠ 易错：一旦自定义构造器，系统不再自动提供无参构造器，需要自己写出来**  
+7.static 变量属于类，被所有对象共享，内存中只有一份  
+8.static 方法用类名直接调用，不需要创建对象  
+**⚠ 易错：静态方法中只能访问静态成员，不能访问实例成员**  
+9.统计创建的对象数：计数器声明为 private static，在每个构造器里都 ++  
+10.实例方法必须用对象调用  
